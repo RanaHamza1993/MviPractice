@@ -1,0 +1,3 @@
+package com.havelisolutions.mvipractice.intefaces
+
+interface ViewState

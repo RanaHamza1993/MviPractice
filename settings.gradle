@@ -1,0 +1,2 @@
+rootProject.name='MviPractice'
+include ':app'

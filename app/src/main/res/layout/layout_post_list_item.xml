@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="PostItemBinding">
+<!--        for importing any class-->
+        <import type="com.havelisolutions.mvipractice.utils.StringUtil"/>
+        <variable
+            name="post"
+            type="com.havelisolutions.mvipractice.models.Post" />
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp"
+    android:background="#fff">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:text="@{post.title}"/>
+    <!--    if the field is integer we can import String Util and get-->
+    <!--    its method of convert to string and pass the value-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/user_id"
+        android:textColor="#000"
+        android:text="@{StringUtil.INSTANCE.convertIntToString(post.userId)}"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</layout>
